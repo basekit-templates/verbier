@@ -148,6 +148,7 @@
 	}
 	&.responsiveslideshow {
 		margin-top: 20px;
+		min-height: inherit;
 		.slideshow-widget-wrapper {
 		}
 		.slideshow-widget-controls {
@@ -191,6 +192,7 @@
 			}
 		}
 		.slideshow-widget {
+			height: auto;
 			.btn-play {
 				background-color: fade(@color-swatch1, 65%);
 				.border-radius(100px);
@@ -265,6 +267,11 @@
 			}
 		}
 		.slideshow-image-list {
+			padding-bottom: 35%;
+			min-height: inherit;
+			&.crop span.inner {
+				background-size: cover;
+			}
 		}
 	}
 }
