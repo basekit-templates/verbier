@@ -1,7 +1,7 @@
 {
     "name":"Verbier",
     "thumbnail":"verbier.png",
-    "screenshot":"verbier.png",
+    "screenshot":"verbier-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "images":[
