@@ -18,6 +18,9 @@
 .bk-header .contain {
     padding-bottom: 0;
 }
+.bk-footer .contain {
+    max-width: 1120px;
+}
 [role="main"] .contain {
     padding: 0;
 }
@@ -37,8 +40,14 @@
 .bk-header .contain {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1140px;
-  width: 90%;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  @media @mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 
