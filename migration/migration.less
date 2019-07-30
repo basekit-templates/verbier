@@ -46,12 +46,26 @@
 .edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
     margin-top: 60px;
+    
+    @media @tablet {
+        margin-top: 40px;
+    }
+    @media @mobile {
+        margin-top: 30px;
+    }
 }
 
 
 // Move spacing to last widget in the main zone (not sections)
 #page-zones__main > .widget:not(.row):last-child {
     margin-bottom: 60px;
+    
+    @media @tablet {
+        margin-bottom: 40px;
+    }
+    @media @mobile {
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -82,9 +96,9 @@
 
 
 // Empy zone spacing
-&.edit .canvas #page-zones__main:empty {
-    margin-top: 3830px;
-    margin-bottom: 3830px;
+&.edit .contain #page-zones__main:empty {
+    margin-top: 40px;
+    margin-bottom: 40px;
     
     @media @mobile {
         margin-top: 20px;
