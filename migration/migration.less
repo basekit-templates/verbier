@@ -1,38 +1,96 @@
-// Re-adds the container width to any widgets inside the main zone
-.empty-zone,
-.bk-header-wrapper,
-#page-zones__main:empty,
-#page-zones__main > .widget:not(.row),
-.row:not(.widget):not(.row--width-no-padding) .row__container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1140px;
-    width: 90%;
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.contain {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: inherit;
+}
+.bk-header .contain {
+    padding-bottom: 0;
+}
+[role="main"] .contain {
+    padding: 0;
 }
 
 
-// Moves spacing to the first widget in the main zone
+
+
+// Migration styles
+// -----------------------------
+
+
+.empty-zone,
+#page-zones__main:empty,
+.site-width-container,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container,
+.bk-header .contain {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+  width: 90%;
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
 .edit #page-zones__main-overlay + .widget:not(.row),
 #page-zones__main > .widget:not(.row):first-child {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
-// Moves spacing to the last widget in the main zone
+
+// Move spacing to last widget in the main zone (not sections)
 #page-zones__main > .widget:not(.row):last-child {
-    margin-bottom: 30px
+    margin-bottom: 60px;
 }
 
 
-// Add spacing to the top of a widget when it procedes a section
+// Add spacing to the top of a widget when it follows a section
 #page-zones__main > .row + .widget:not(.row) {
-    margin-top: 15px;
+    margin-top: 30px;
+    
+    @media @mobile {
+        margin-top: 20px;
+    }
 }
 
-// Adds spacing to the top and bottom of a section when a widget precedes it
+
+// Adds spacing to the section when a widget is before it
 #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+    @media @mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     &:not(:last-child) {
-         max-width: 100%;   }
+         margin-bottom: 0;
+    }
+}
+
+
+// Empy zone spacing
+&.edit .canvas #page-zones__main:empty {
+    margin-top: 3830px;
+    margin-bottom: 3830px;
+    
+    @media @mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
 }
