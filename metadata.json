@@ -4,6 +4,7 @@
     "screenshot":"verbier-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "images":[
         "images/image-1.jpg"
     ],
